@@ -1,0 +1,11 @@
+<h2><%= @author.name %>'s Body of Work</h2>
+
+<div>
+	<% @author.books.each do |b| %>
+	<ul>
+		<li><%= b.title %></li>
+		<li><%= b.summary %></li>
+		<li><%= local_time(b.created_at) %></li>
+	</ul>
+	<% end %>
+</div>

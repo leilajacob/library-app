@@ -1,0 +1,21 @@
+<div>
+    <h2>Authors</h2>
+    <% @authors.each do |author| %>
+        <ul>
+	    <li><%= link_to author.name, author_collection_path(id: author.id) %></li>
+	    <li><%= author.email %></li>
+	</ul>
+    <% end %>
+</div>
+<div>
+    <h2>Books</h2>
+    <% @books.each do |book| %>
+	<ul>
+	    <li><%= book.title %></li>
+	    <li><%= book.summary %></li>
+	</ul>
+    <% end %>
+</div>
+
+<%= paginate @books %> 
+
